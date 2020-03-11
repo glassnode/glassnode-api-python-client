@@ -1,4 +1,13 @@
-# Option startup script when using Jupyter Notebooks
+# Optional startup script when using Jupyter Notebooks
+
+GLASSNODE_CLIENT_PATH = '/path/to/glassnode-api-python-client'
+
+import sys
+sys.path.append(GLASSNODE_CLIENT_PATH)
+
+# surpress warnings
+import warnings
+warnings.filterwarnings('ignore')
 
 from glassnode import GlassnodeClient
 import matplotlib.pyplot as plt
