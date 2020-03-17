@@ -1,6 +1,7 @@
 # Optional startup script when using Jupyter Notebooks
+import os
 
-GLASSNODE_CLIENT_PATH = '/path/to/glassnode-api-python-client'
+GLASSNODE_CLIENT_PATH = os.getenv('GLASSNODE_CLIENT_PATH', '/home/jovyan/glassnode-api-client')
 
 import sys
 sys.path.append(GLASSNODE_CLIENT_PATH)
