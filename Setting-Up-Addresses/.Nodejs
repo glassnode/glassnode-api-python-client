@@ -1,0 +1,1485 @@
+*"#
+*"# Glassnode Docs
+*"# Intro
+*"# Powered by GitBook
+*"# Addresses
+
+*"#/
+*"# Get
+#Depositing Addresses
+*"#/ 
+# {[<https://api.glassnode.com>]}
+/v1/metrics/addresses/sending_to_exchanges_count
+The number of unique addresses that appeared as a sender in a transaction sending funds to exchanges. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SendingToExchangesCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 10m, 1h, 24h, 1w, 1month
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Withdrawing Addresses
+https://api.glassnode.com
+/v1/metrics/addresses/receiving_from_exchanges_count
+The number of unique addresses that appeared as a receiver in a transaction receiving funds from an exchanges. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.ReceivingFromExchangesCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 10m, 1h, 24h, 1w, 1month
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Total Addresses
+https://api.glassnode.com
+/v1/metrics/addresses/count
+The total number of unique addresses that ever appeared in a transaction of the native coin in the network. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Count
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m, 1w, 1month
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Sending Addresses
+https://api.glassnode.com
+/v1/metrics/addresses/sending_count
+The number of unique addresses that were active as a sender of funds. Only addresses that were active as a sender in successful non-zero transfers are counted. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SendingCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m, 1w, 1month
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Receiving Addresses
+https://api.glassnode.com
+/v1/metrics/addresses/receiving_count
+The number of unique addresses that were active as a receiver of funds. Only addresses that were active as a receiver in successful non-zero transfers are counted. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.ReceivingCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m, 1w, 1month
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Active Addresses
+https://api.glassnode.com
+/v1/metrics/addresses/active_count
+The number of unique addresses that were active either as a sender or receiver. Only addresses that were active in successful transactions are counted. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.ActiveCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m, 1w, 1month
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+New Addresses
+https://api.glassnode.com
+/v1/metrics/addresses/new_non_zero_count
+The number of unique addresses that appeared for the first time in a transaction of the native coin in the network. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.NewNonZeroCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m, 1w, 1month
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Accumulation Addresses
+https://api.glassnode.com
+/v1/metrics/addresses/accumulation_count
+The number unique accumulation addresses. Accumulation addresses are defined as addresses that have at least 2 incoming non-dust transfers and have never spent funds. Exchange addresses and addresses receiving from coinbase transactions (miner addresses) are discarded. To account for lost coins, addresses that were last active more than 7 years ago are omitted as well. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.AccumulationCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Accumulation Balance
+https://api.glassnode.com
+/v1/metrics/addresses/accumulation_balance
+The total amount of funds held in accumulation addresses (https://studio.glassnode.com/metrics?a=BTC&category=&m=addresses.AccumulationCount). Accumulation addresses are defined as addresses that have at least 2 incoming non-dust transfers and have never spent funds. Exchange addresses and addresses receiving from coinbase transactions (miner addresses) are discarded. To account for lost coins, addresses that were last active more than 7 years ago are omitted as well. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.AccumulationBalance
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Non-Zero Balance
+https://api.glassnode.com
+/v1/metrics/addresses/non_zero_count
+The number of unique addresses holding a positive (non-zero) amount of coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded.For ERC-20 Assets 1h resolution is being updated every 24 hours. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.NonZeroCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ 0.01
+https://api.glassnode.com
+/v1/metrics/addresses/min_point_zero_1_count
+The number of unique addresses holding at least 0.01 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.MinPointZero1Count
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ 0.1
+https://api.glassnode.com
+/v1/metrics/addresses/min_point_1_count
+The number of unique addresses holding at least 0.1 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.MinPoint1Count
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ 1
+https://api.glassnode.com
+/v1/metrics/addresses/min_1_count
+The number of unique addresses holding at least 1 coin. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min1Count
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ 10
+https://api.glassnode.com
+/v1/metrics/addresses/min_10_count
+The number of unique addresses holding at least 10 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min10Count
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ 100
+https://api.glassnode.com
+/v1/metrics/addresses/min_100_count
+The number of unique addresses holding at least 100 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min100Count
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ 1k
+https://api.glassnode.com
+/v1/metrics/addresses/min_1k_count
+The number of unique addresses holding at least 1k coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min1KCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ 10k
+https://api.glassnode.com
+/v1/metrics/addresses/min_10k_count
+The number of unique addresses holding at least 10k coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min10KCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ 32 ETH
+https://api.glassnode.com
+/v1/metrics/addresses/min_32_count
+The number of unique addresses holding at least 32 ETH. This is the number of potential validators for ETH 2.0. Only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=ETH&m=addresses.Min32Count
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance < 0.001
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_less_0001
+The total supply held by addresses with a balance lower than 0.001 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalanceLess0001
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance 0.001 - 0.01
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_0001_001
+The total supply held by addresses with a balance between 0.001 and 0.01 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalance0001001
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance 0.01 - 0.1
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_001_01
+The total supply held by addresses with a balance between 0.01 and 0.1 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalance00101
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance 0.1 - 1
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_01_1
+The total supply held by addresses with a balance between 0.1 and 1 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalance011
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance 1 - 10
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_1_10
+The total supply held by addresses with a balance between 1 and 10 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalance110
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance 10 - 100
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_10_100
+The total supply held by addresses with a balance between 10 and 100 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalance10100
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance 100 - 1k
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_100_1k
+The total supply held by addresses with a balance between 100 and 1,000 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalance1001K
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance 1k - 10k
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_1k_10k
+The total supply held by addresses with a balance between 1,000 and 10,000 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalance1K10K
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance 10k - 100k
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_10k_100k
+The total supply held by addresses with a balance between 10,000 and 100,000 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalance10K100K
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Supply Held by Addresses with Balance > 100k
+https://api.glassnode.com
+/v1/metrics/addresses/supply_balance_more_100k
+The total supply held by addresses with a balance of at least 100,000 coins. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyBalanceMore100K
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h, 10m
+f
+OPTIONAL
+string
+format: JSON, CSV
+c
+OPTIONAL
+string
+currency: NATIVE, USD
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Address Supply Distribution
+https://api.glassnode.com
+/v1/metrics/addresses/supply_distribution_relative
+The relative distribution of the circulating supply held by addresses with specific balance bands. 
+
+For Ethereum the relative supply distribution across addresses with specific balance bandsonly. Only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.SupplyDistributionRelative
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ $1
+https://api.glassnode.com
+/v1/metrics/addresses/min_1_usd_count
+The number of unique addresses holding at least a value of $1 USD. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min1UsdCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ $10
+https://api.glassnode.com
+/v1/metrics/addresses/min_10_usd_count
+The number of unique addresses holding at least a value of $10 USD. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min10UsdCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ $100
+https://api.glassnode.com
+/v1/metrics/addresses/min_100_usd_count
+The number of unique addresses holding at least a value of $100 USD. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min100UsdCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ $1k
+https://api.glassnode.com
+/v1/metrics/addresses/min_1k_usd_count
+The number of unique addresses holding at least a value of $1k USD. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min1KUsdCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ $10k
+https://api.glassnode.com
+/v1/metrics/addresses/min_10k_usd_count
+The number of unique addresses holding at least a value of $10k USD. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min10KUsdCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ $100k
+https://api.glassnode.com
+/v1/metrics/addresses/min_100k_usd_count
+The number of unique addresses holding at least a value of $100k USD. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min100KUsdCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses with Balance ≥ $1M
+https://api.glassnode.com
+/v1/metrics/addresses/min_1m_usd_count
+The number of unique addresses holding at least a value of $1M USD. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.Min1MUsdCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses in Profit
+https://api.glassnode.com
+/v1/metrics/addresses/profit_count
+The number of unique addresses whose funds have an average buy price that is lower than the current price. "Buy price" is here defined as the price at the time coins were transferred into an address. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.ProfitCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Addresses in Loss
+https://api.glassnode.com
+/v1/metrics/addresses/loss_count
+The number of unique addresses whose funds have an average buy price that is higher than the current price."Buy price" is here defined as the price at the time coins were transferred into an address. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.LossCount
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+GET
+Percent Addresses in Profit
+https://api.glassnode.com
+/v1/metrics/addresses/profit_relative
+The percentage of unique addresses whose funds have an average buy price that is lower than the current price. "Buy price" is here defined as the price at the time coins were transferred into an address. 
+
+For Ethereum only Externally Owned Addresses (EOAs) are counted, contracts are excluded. 
+
+View in Studio: 
+https://studio.glassnode.com/metrics?a=BTC&m=addresses.ProfitRelative
+Request
+Response
+Query Parameters
+a
+REQUIRED
+string
+asset symbol (see endpoints page for more details)
+s
+OPTIONAL
+integer
+since, unix timestamp
+u
+OPTIONAL
+integer
+until, unix timestamp
+i
+OPTIONAL
+string
+frequency interval: 1h, 24h
+f
+OPTIONAL
+string
+format: JSON, CSV
+timestamp_format
+OPTIONAL
+string
+timestamp format: unix or humanized (RFC 3339)
+API - Previous
+Assets List
+Next - API Endpoints
+Blockchain
+
+
+
+Last updated 2 months ago
+Search...
+Search Placeholder
