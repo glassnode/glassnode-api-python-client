@@ -1,5 +1,8 @@
 # glassnode-api-python-client
-The official Python client library for Glassnode's API – https://docs.glassnode.com
+
+NOTE: THIS REPO IS DEPRECATED AND NOT ACTIVELY MAINTAINED BY THE GLASSNODE TEAM.
+
+Python client library for Glassnode's API – https://docs.glassnode.com/basic-api/api
 
 ## Quick Start
 
